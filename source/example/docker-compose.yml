@@ -1,0 +1,7 @@
+version: '3.2'
+services: 
+    python-ml:
+      container_name: python-ml
+    gql-node: 
+      container_name: gql-node
+     
