@@ -91,11 +91,11 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 
 CMD ["/bin/bash"]
 
-
+#http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
+#wget -nd https://github.com/JeffTrain/selfie/raw/master/shape_predictor_68_face_landmarks.dat
 WORKDIR /usr/src/files
 RUN apt-get install -y bzip2 && \
-   wget http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2 && \
-bzip2 -d shape_predictor_68_face_landmarks.dat.bz2  && \
+ wget -nd https://github.com/JeffTrain/selfie/raw/master/shape_predictor_68_face_landmarks.dat  && \
 pip install wheel && \
 pip install dlib
 
@@ -103,6 +103,8 @@ RUN pip list && whereis dlib
 COPY test.py /usr/src/files/
 RUN python /usr/src/files/test.py
 
+
+#bzip2 -d shape_predictor_68_face_landmarks.dat.bz2 
 
 #part2
 #WORKDIR /myapp
