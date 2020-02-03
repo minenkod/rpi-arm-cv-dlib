@@ -82,7 +82,6 @@ RUN	cd /tmp \
         && date \
         && echo "Raspbian $RASPBIAN_VERSION - OpenCV $OPENCV_VERSION Docker Build finished."
 
-
 ARG VCS_REF
 ARG BUILD_DATE
 LABEL org.label-schema.build-date=$BUILD_DATE \
@@ -90,7 +89,6 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.vcs-url="https://github.com/sgtwilko/rpi-raspbian-opencv"
 
 CMD ["/bin/bash"]
-
 #http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
 #wget -nd https://github.com/JeffTrain/selfie/raw/master/shape_predictor_68_face_landmarks.dat
 WORKDIR /usr/src/files
