@@ -11,7 +11,7 @@ ARG RASPBIAN_VERSION
 ARG DEBIAN_FRONTEND=noninteractive
 
 # install opencv3 as detailied in: https://www.pyimagesearch.com/2017/09/04/raspbian-stretch-install-opencv-3-python-on-your-raspberry-pi/
-
+RUN  sudo apt upgrade
 # update apt
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends apt-utils \
