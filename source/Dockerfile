@@ -101,7 +101,8 @@ RUN pip list && whereis dlib
 COPY test.py /usr/src/files/
 RUN python /usr/src/files/test.py
 
-
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.7 1
+RUN update-alternatives --set python /usr/bin/python3.7
 #bzip2 -d shape_predictor_68_face_landmarks.dat.bz2 
 
 #part2
