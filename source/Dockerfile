@@ -48,7 +48,7 @@ RUN apt-get update \
 	&& apt-get purge -y --auto-remove \
 	&& rm -rf /var/lib/apt/lists/*
 
-ARG OPENCV_VERSION=4.0.1
+ARG OPENCV_VERSION=4.5.4
 ENV OPENCV_VERSION $OPENCV_VERSION
 
 	# download latest source & contrib
